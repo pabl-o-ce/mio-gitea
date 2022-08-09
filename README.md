@@ -1,2 +1,3 @@
-# MioGitea
-## How Setup
+# Mio Gitea Dockerized
+## Setup
+
