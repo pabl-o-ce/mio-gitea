@@ -1,3 +1,3 @@
-# Mio Gitea Dockerized
+# Gitea Dockerized
 ## Setup
 
