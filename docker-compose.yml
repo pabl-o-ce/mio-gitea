@@ -22,7 +22,7 @@ services:
       - USER_UID=1000
       - USER_GID=1000
       - GITEA__database__DB_TYPE=postgres
-      - GITEA__database__HOST=db:gitea_db_port
+      - GITEA__database__HOST=db:5432
       - GITEA__database__NAME=gitea_db_name
       - GITEA__database__USER=gitea_db_user
       - GITEA__database__PASSWD=gitea_db_pass
@@ -39,7 +39,6 @@ services:
     depends_on:
       - db
     secrets:
-      - gitea_db_port
       - gitea_db_name
       - gitea_db_user
       - gitea_db_pass
