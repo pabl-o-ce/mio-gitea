@@ -21,7 +21,7 @@ services:
     depends_on:
       - gitea-postgres
     extra_hosts:
-      - drone.carreraestrada.com:192.168.10.10
+      - <drone-domain>:<IP>
 
   gitea-postgres:
     container_name: gitea-postgres
