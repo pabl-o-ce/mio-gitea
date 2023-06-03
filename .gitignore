@@ -21,3 +21,4 @@ vendor/pkg/
 pyenv
 Vagrantfile
 *.env
+*.service

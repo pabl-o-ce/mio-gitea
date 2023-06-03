@@ -1,2 +1,3 @@
-# Gitea Dockerized
+# Gitea and Drone CI
+
 ## Setup
