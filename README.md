@@ -12,8 +12,8 @@ This repository contains a Docker Compose configuration for setting up Gitea, a 
 
 1. Clone this repository:
    ```
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone [(https://github.com/pabl-o-ce/mio-gitea.git)](https://github.com/pabl-o-ce/mio-gitea.git)
+   cd mio-gitea
    ```
 
 2. Create a `.env` file in the root directory of the project with the following variables (adjust as needed):
