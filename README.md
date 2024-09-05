@@ -12,7 +12,7 @@ This repository contains a Docker Compose configuration for setting up Gitea, a 
 
 1. Clone this repository:
    ```
-   git clone [(https://github.com/pabl-o-ce/mio-gitea.git)](https://github.com/pabl-o-ce/mio-gitea.git)
+   git clone https://github.com/pabl-o-ce/mio-gitea.git
    cd mio-gitea
    ```
 
