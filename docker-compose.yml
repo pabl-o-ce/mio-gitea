@@ -20,8 +20,6 @@ services:
       - "2222:2222"
     depends_on:
       - gitea-postgres
-    extra_hosts:
-      - <drone-domain>:<IP>
 
   gitea-postgres:
     container_name: gitea-postgres
@@ -35,29 +33,11 @@ services:
     volumes:
       - gitea-postgres:/var/lib/postgresql/data
 
-  drone:
-    image: drone/drone:2
-    container_name: drone
-    volumes:
-      - drone:/var/lib/drone/
+  gitea-runner:
+    image: gitea/act_runner:latest
     restart: always
     depends_on:
       - gitea
-    env_file:
-      - .env
-    networks:
-      - gitea
-      - middle-earth
-    extra_hosts:
-      - <git-domain>:<IP>
-      - <drone-domain>:<IP>
-
-  drone-runner:
-    image: drone/drone-runner-docker:1
-    container_name: drone-runner
-    restart: always
-    depends_on:
-      - drone
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     env_file:
@@ -66,7 +46,6 @@ services:
       - gitea
     extra_hosts:
       - <git-domain>:<IP>
-      - <drone-domain>:<IP>
       - <registry-domain>:<IP>
 
 networks:
